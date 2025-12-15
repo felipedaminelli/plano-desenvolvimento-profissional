@@ -6,6 +6,74 @@
     <title>Proposta de Desenvolvimento Profissional 2026</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para a seção de Introdução */
+        .introducao-detalhes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .detalhe-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detalhe-item h3 {
+            margin-top: 0;
+            color: #986dff;
+        }
+
+        .detalhe-item ul {
+            padding-left: 20px;
+            flex-grow: 1;
+        }
+        
+        .detalhe-item ul ul {
+            padding-left: 15px;
+            margin-top: 0.5rem;
+        }
+
+        /* Estilos para os Pilares Estratégicos interativos */
+        .pilar-item.pilar-interativo { padding: 0; }
+        .pilar-summary { 
+            list-style: none; 
+            cursor: pointer; 
+            padding: 2rem; 
+            text-align: center; 
+            transition: background-color 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pilar-summary::-webkit-details-marker { display: none; }
+        .pilar-item.pilar-interativo details[open] > .pilar-summary { background-color: rgba(152, 109, 255, 0.08); }
+        .pilar-summary::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #8b5cf6;
+            border-bottom: 2px solid #8b5cf6;
+            transform: rotate(45deg);
+            margin-top: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .pilar-item.pilar-interativo details[open] > .pilar-summary::after {
+            transform: rotate(225deg);
+        }
+        .pilar-content { padding: 0 2rem 2rem 2rem; margin: 0; text-align: center; animation: fadeIn 0.4s ease-in-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,7 +86,8 @@
             </div>
             <div class="header-content">
                 <h1>Plano de Desenvolvimento Profissional 2026</h1>
-                <p class="subtitle">Especialização em Alta Performance Digital. Aprofundamento estratégico em UX/UI orientado a dados, metodologia de Conversão (CRO) e o domínio das arquiteturas de interface com React. Este desenvolvimento visa criar um profissional com a amplitude de habilidades necessária para projetar, validar e otimizar produtos digitais de forma autônoma.</p>
+                <p class="subtitle">O Plano 2026 é um investimento estratégico que visa elevar a maturidade digital da organização. A especialização em Alta Performance Digital abrange UX/UI orientado a dados, metodologias de Conversão (CRO) e o domínio do Front-end com React.</p>
+                <p class="subtitle">Este desenvolvimento criará um profissional capaz de atuar de forma integrada entre design, tecnologia e negócio. O objetivo é ampliar a capacidade da marca de escalar campanhas digitais com alta eficiência e consistência, fortalecendo sua percepção de inovação, qualidade e foco em resultados.</p>
                 <p class="author">Apresentado por Felipe Daminelli – Designer Gráfico Pleno</p>
             </div>
         </div>
@@ -27,30 +96,67 @@
     <main class="container">
 
         <section id="introducao" class="card animate-on-scroll">
-            <h2>O Desafio e a Oportunidade</h2>
+            <h2>O Desafio e a Oportunidade Estratégica para a Marca</h2>
             <p><strong>Ponto de Partida:</strong> 5 anos de experiência como Designer Gráfico Pleno, com um olhar estético sólido.</p>
-            <p><strong>Oportunidade:</strong> Migrar de um perfil focado na entrega visual para um perfil estratégico, que une Design, usabilidade e resultados de negócio.</p>
-            <p><strong>Objetivo:</strong> Posicionar-me como um Designer Estratégico. Continuarei a garantir a qualidade das demandas visuais essenciais (como a criação de identidade visual, peças para redes sociais e apresentações), mas dedicarei meu foco principal à entrega de interfaces digitais que não só são esteticamente superiores, mas também tecnicamente viáveis, orientadas à conversão (CRO) e prontas para o ecossistema Front-end React, garantindo maior velocidade e redução de custos no desenvolvimento.</p>
+            <p><strong>Oportunidade Estratégica:</strong> Evoluir de um perfil focado na entrega visual para uma atuação estratégica, que conecta experiência do usuário (UX), viabilidade técnica e objetivos de métricas de branding como share of voice, posicionamento e encantamento por meio de experiências digitais de alta performance.</p>
+
+            <div class="introducao-detalhes">
+                <article class="detalhe-item animate-on-scroll">
+                    <h3>Para a Marca, isso significa:</h3>
+                    <ul>
+                        <li>Interfaces digitais mais consistentes com o posicionamento institucional e esteticamente superiores.</li>
+                        <li>Decisões de design embasadas em dados, reduzindo o achismo e aumentando a credibilidade.</li>
+                        <li>Redução de retrabalho, maior velocidade de desenvolvimento e melhor ROI em campanhas digitais.</li>
+                    </ul>
+                </article>
+                <article class="detalhe-item animate-on-scroll">
+                    <h3>Objetivo Institucional</h3>
+                    <p>Consolidar um Designer Estratégico como ativo da organização, capaz de:</p>
+                    <ul>
+                        <li>Manter a excelência na entrega das demandas visuais essenciais (identidade visual, materiais institucionais, redes sociais e apresentações), preservando a coerência da marca em todos os pontos de contato.</li>
+                        <li>Atuar de forma prioritária na concepção de interfaces digitais de alta performance, que sejam:
+                            <ul>
+                                <li>Esteticamente alinhadas ao branding e ao posicionamento da marca.</li>
+                                <li>Tecnicamente viáveis para o ecossistema Front-end React.</li>
+                                <li>Orientadas à conversão (CRO) e aos objetivos de negócio.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <p>Esse posicionamento gera ganhos diretos de eficiência operacional, redução de custos de desenvolvimento e maior velocidade de lançamento, fortalecendo a competitividade da marca no ambiente digital.</p>
         </section>
         
         <section id="pilares" class="card animate-on-scroll">
-            <h2>1. Pilares Estratégicos</h2>
-            <p>O que o mercado exige para um profissional de alto impacto:</p>
+            <h2>1. Pilares Estratégicos de Desenvolvimento</h2>
+            <p>O que o mercado exige – e o que fortalece a marca:</p>
             <div class="pilares-grid">
-                <article class="pilar-item animate-on-scroll">
-                    <img src="https://static.wixstatic.com/shapes/c97c86_868496bad7c04117a77df9c691576448.svg" class="pilar-icon" alt="Ícone de UX/UI & CRO">
-                    <h3>UX/UI & CRO</h3>
-                    <p>Foco na justificação por dados e resultados de negócio.</p>
+                <article class="pilar-item pilar-interativo animate-on-scroll">
+                    <details>
+                        <summary class="pilar-summary">
+                            <img src="https://static.wixstatic.com/shapes/c97c86_868496bad7c04117a77df9c691576448.svg" class="pilar-icon" alt="Ícone de UX/UI & CRO">
+                            <h3>UX/UI & CRO orientado a dados</h3>
+                        </summary>
+                        <p class="pilar-content">Designs que deixam de ser apenas “bonitos” e passam a ser estratégicos, sustentados por testes e métricas de negócio. Isso reforça a credibilidade da marca, melhora a experiência do usuário e aumenta taxas de conversão.</p>
+                    </details>
                 </article>
-                <article class="pilar-item animate-on-scroll">
-                    <img src="https://static.wixstatic.com/shapes/c97c86_a7ec45bcc9524e05b441b58e14475300.svg" class="pilar-icon" alt="Ícone de Frontend Thinking">
-                    <h3>Frontend Thinking</h3>
-                    <p>Entendimento da lógica de Componentes React para viabilidade técnica.</p>
+                <article class="pilar-item pilar-interativo animate-on-scroll">
+                    <details>
+                        <summary class="pilar-summary">
+                            <img src="https://static.wixstatic.com/shapes/c97c86_a7ec45bcc9524e05b441b58e14475300.svg" class="pilar-icon" alt="Ícone de Frontend Thinking">
+                            <h3>Frontend Thinking</h3>
+                        </summary>
+                        <p class="pilar-content">Compreensão da arquitetura React, garantindo que as interfaces sejam pensadas para viabilidade técnica, escalabilidade e performance. O resultado é uma marca mais ágil, com menos fricção entre design e tecnologia.</p>
+                    </details>
                 </article>
-                <article class="pilar-item animate-on-scroll">
-                    <img src="https://static.wixstatic.com/shapes/c97c86_608a332e72234464a89348b146c749d1.svg" class="pilar-icon" alt="Ícone de Escalabilidade">
-                    <h3>Escalabilidade</h3>
-                    <p>Criação e gestão de Design Systems para eficiência e consistência.</p>
+                <article class="pilar-item pilar-interativo animate-on-scroll">
+                    <details>
+                        <summary class="pilar-summary">
+                            <img src="https://static.wixstatic.com/shapes/c97c86_608a332e72234464a89348b146c749d1.svg" class="pilar-icon" alt="Ícone de Escalabilidade">
+                            <h3>Escalabilidade e Design Systems</h3>
+                        </summary>
+                        <p class="pilar-content">Asseguram consistência visual, eficiência operacional e coerência de marca em todas as campanhas digitais. Esse pilar sustenta o crescimento da marca sem perda de identidade ou qualidade.</p>
+                    </details>
                 </article>
             </div>
         </section>
@@ -227,20 +333,25 @@
         </section>
 
         <section id="roi" class="card animate-on-scroll">
-            <h2>4. Retorno do Investimento </h2>
+            <h2>4. Retorno do Investimento: Síntese de Valor para o Negócio</h2>
+            <p>Este plano não representa apenas evolução profissional individual, mas a consolidação de uma competência estratégica interna, capaz de:</p>
             <div class="roi-container">
                 <div class="roi-grid">
                     <article class="roi-item animate-on-scroll">
-                        <h4>Economia de Tempo</h4>
-                        <p>Maior eficiência na comunicação entre Design e Desenvolvimento (React). Protótipos mais realistas e menos retrabalho.</p>
+                        <h4>Elevar a Maturidade Digital</h4>
+                        <p>Fortalecer o branding em ambientes digitais, integrando design, tecnologia e negócio de forma sustentável.</p>
                     </article>
                     <article class="roi-item animate-on-scroll">
-                        <h4>Redução de Custo</h4>
-                        <p>Criação de componentes reutilizáveis (Design System), reduzindo o débito técnico e o tempo de desenvolvimento de novas features.</p>
+                        <h4>Economia de Tempo e Custo</h4>
+                        <p>Maior eficiência na comunicação Design-Dev (React) e criação de componentes reutilizáveis (Design System), reduzindo o débito técnico.</p>
                     </article>
                     <article class="roi-item animate-on-scroll">
-                        <h4>Aumento de Receita</h4>
-                        <p>Designs fundamentados em dados, focados em otimizar funis de conversão e atingir metas de negócio.</p>
+                        <h4>Aumento de Receita/Conversão</h4>
+                        <p>Designs fundamentados em dados, focados em otimizar funis de conversão (CRO) e atingir metas de negócio.</p>
+                    </article>
+                    <article class="roi-item animate-on-scroll">
+                        <h4>Consistência Institucional</h4>
+                        <p>Coerência visual garantida em todas as peças digitais, fortalecendo a percepção de qualidade da marca.</p>
                     </article>
                 </div>
                 <div class="roi-image-container animate-on-scroll">
